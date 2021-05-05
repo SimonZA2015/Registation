@@ -12,7 +12,7 @@ const data = {
         if (text.length > 5) {
             try {
                 this._info.name = text;
-                this.setStep();
+                this.nextStep();
                 this.rerender();
                 return true;
             }catch (e) {
@@ -23,7 +23,7 @@ const data = {
         }
     },
 
-    setStep() {
+    nextStep() {
       this._step = this._step + 1;
     },
 
@@ -34,10 +34,14 @@ const data = {
     setBirthday(date) {
         //добавляем в инфу о рождении
         try {
-            this._info.birthday = date;
-            this.setStep();
-            this.rerender();
-            return true;
+            let l = date.split('.');
+            alert(l)
+            if (l[0].length === 2 && l[1].length === 2 && l[2].length === 4) {
+                this._info.birthday = date;
+                this.nextStep();
+                this.rerender();
+                return true;
+            }
         }catch (e) {
             return false;
         }
@@ -48,7 +52,7 @@ const data = {
         try{
             if (pass === pass1) {
                 this._info.pass = pass;
-                this.setStep();
+                this.nextStep();
                 this.rerender();
                 return true;
             }else {
@@ -65,12 +69,13 @@ const data = {
     },
 
     subscribe(app) {
-        //дает возможность обновлять экран
+        //привязываем обновлеие экрана
         this._render = app;
         app();
     },
 
     rerender() {
+        //функ дает возможность обновлять экрна
         this._render();
     }
 

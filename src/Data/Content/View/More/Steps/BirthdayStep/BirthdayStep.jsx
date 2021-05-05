@@ -9,9 +9,9 @@ const BirthdayStep = (props) => {
 
     return (
         <div className={style.body}>
-            <InputBlock text={'День рождения'} icon={<CakeIcon />} set={props.br} type={'number'} />
+            <InputBlock text={'День рождения'} icon={<CakeIcon />} set={props.br} />
             <ButtonGo go={props.go} />
-            <spam>Ведите дату правельно</spam>
+            <spam>Ведите дату правильно</spam>
         </div>
     )
 }
