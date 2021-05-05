@@ -11,7 +11,7 @@ const BirthdayStep = (props) => {
         <div className={style.body}>
             <InputBlock text={'День рождения'} icon={<CakeIcon />} set={props.br} />
             <ButtonGo go={props.go} />
-            <spam>Ведите дату правильно</spam>
+            <spam>Ведите дату</spam>
         </div>
     )
 }
