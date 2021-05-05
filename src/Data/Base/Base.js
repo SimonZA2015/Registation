@@ -9,13 +9,17 @@ const data = {
 
     setName(text) {
         //добавляем инфу о имени
-        try {
-            this._info.name = text;
-            this.setStep();
-            this.rerender();
-            return true;
-        }catch (e) {
-            return false;
+        if (text.length > 5) {
+            try {
+                this._info.name = text;
+                this.setStep();
+                this.rerender();
+                return true;
+            }catch (e) {
+                return false;
+            }
+        }else {
+            return false
         }
     },
 

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import InitialsStep from "../../Steps/InitialsStep/InitialsStep";
 
 import style from './RegistrationBlock.module.css';

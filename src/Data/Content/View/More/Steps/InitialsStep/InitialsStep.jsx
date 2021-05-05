@@ -12,6 +12,7 @@ const InitialsView = (props) => {
         <div className={style.body}>
             <InputBlock set={(text) => props.name(text)} text={'Ваше имя и фамилия'} icon={<AccountCircle />}  />
             <ButtonGo go={props.go} />
+            <span>Ведите имя не меньше 7 символов</span>
         </div>
     )
 }

@@ -12,6 +12,7 @@ const PasswordStep = (props) => {
             <InputBlock text={'Пароль'} icon={<LockIcon />} set={props.pass} type={'password'} />
             <InputBlock text={'Потвердите пароль'} icon={<LockIcon />} set={props.pass1} type={'password'}/>
             <ButtonGo go={props.go} />
+            <span>Придумайте пароль и повторите его в следузем инпуте</span>
         </div>
     )
 }
